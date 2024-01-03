@@ -13,5 +13,4 @@ RUN adduser -D -h /home/term -s /bin/sh term && \
 EXPOSE 3000
 COPY --from=builder /usr/src/app /app
 CMD node bin 
-Source Repository
 
