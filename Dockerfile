@@ -8,7 +8,7 @@ FROM node:8-alpine
 MAINTAINER butlerx@notthe.cloud
 WORKDIR /app
 RUN adduser -D -h /home/term -s /bin/sh term && \
-    ( echo "Wau:Wau" | chpasswd ) && \
+    ( echo "root:root" | chpasswd ) && \
 	apk add openssh-client
 EXPOSE 3000
 COPY --from=builder /usr/src/app /app
